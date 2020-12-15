@@ -57,9 +57,9 @@ const mkTemperature = (params, imageUrl) => {
         
         user: params.userName,
         q1: !!params.q1,
-        q2: params.q2,
+        q2: !!params.q2,
         ts: new Timestamp(),
-        temperature: params.temperature,
+        temperature: parseFloat(params.temperature),
         image: imageUrl
     }
 }
